@@ -1,12 +1,17 @@
 <template>
   <div id="wrap">
     <h1>My Todo List</h1>
+    <TodoList/>
   </div>
 </template>
 
 <script>
-export default {
+import TodoList from './components/TodoList'
 
+export default {
+  components: {
+    TodoList
+  }
 }
 </script>
 
@@ -17,6 +22,7 @@ export default {
 }
 
 h1 {
+  margin: 20px 0;
   color: #888;
   font-size: 20px;
   text-align: center;

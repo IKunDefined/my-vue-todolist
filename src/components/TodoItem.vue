@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ul>
+    <ul v-if="itemlist.length">
       <li
         v-for="(item, index) in itemlist"
         :key="index">
@@ -8,6 +8,7 @@
         <button @click="setId(index)">&times;</button>
       </li>
     </ul>
+    <p v-else>你这么闲，找点事情做做吧！</p>
   </div>
 </template>
 
@@ -18,21 +19,26 @@ export default {
       this.$emit('transferId', index)
     }
   },
-  props: ['itemlist']
+  props: ['itemlist', 'flag']
 }
 </script>
 
 <style scoped>
 ul {
   width: 80%;
-  margin: 0 auto;
+  margin: 10px auto 0;
   padding: 10px;
 }
 li {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   background: #f5f5f5;
 }
 button {
   float: right;
+}
+p {
+  width: 80%;
+  margin: 10px auto;
+  padding: 10px;
 }
 </style>

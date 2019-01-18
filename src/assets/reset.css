@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html,body {
+  height: 100%;
+}
+
 body {
   background: #f7f7f7;
 }
@@ -17,4 +21,24 @@ li {
 ul {
   padding: 0;
   margin: 0;
+}
+
+button {
+  background: #fff;
+  border: 1px solid #888;
+  border-radius: 5px;
+  height: 30px;
+  font-size: 12px;
+  color: #666;
+  outline: none;
+}
+
+button:active {
+  background: #888;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+input {
+  outline: none;
 }

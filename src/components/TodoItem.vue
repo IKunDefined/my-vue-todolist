@@ -29,16 +29,23 @@ ul {
   margin: 10px auto 0;
   padding: 10px;
 }
+
 li {
   margin-bottom: 10px;
   background: #f5f5f5;
+  height: 30px;
+  line-height: 30px;
 }
+
 button {
   float: right;
 }
+
 p {
   width: 80%;
   margin: 10px auto;
   padding: 10px;
+  height: 30px;
+  line-height: 30px;
 }
 </style>

@@ -1,18 +1,15 @@
 <template>
   <div>
-    <Header/>
-    <TodoList/>
+    <Home/>
   </div>
 </template>
 
 <script>
-import Header from './components/Header'
-import TodoList from './components/TodoList'
+import Home from './common/Home'
 
 export default {
   components: {
-    Header,
-    TodoList
+    Home
   }
 }
 </script>

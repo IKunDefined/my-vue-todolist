@@ -1,9 +1,13 @@
 <template>
   <div id="header">
     <div class="center">
-      <h1>My Todo List</h1>
-      <UserLogin/>
-      <UserRegister/>
+      <div class="left">
+        <h1>My Todo List</h1>
+      </div>
+      <div class="right">
+        <UserLogin class="left login-button button" @transferDisplay="display"/>
+        <UserRegister class="right register-button button" @transferDisplay="display"/>
+      </div>
     </div>
   </div>
 </template>
@@ -16,6 +20,17 @@ export default {
   components: {
     UserLogin,
     UserRegister
+  },
+  data () {
+    return {
+      isDisplay: {}
+    }
+  },
+  methods: {
+    display (isDisplay) {
+      this.isDisplay = isDisplay
+      this.$emit('transferDisplay', this.isDisplay)
+    }
   }
 }
 </script>
@@ -38,5 +53,17 @@ export default {
 h1 {
   color: #888;
   font-size: 20px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.login-button {
+  margin-right: 20px;
 }
 </style>

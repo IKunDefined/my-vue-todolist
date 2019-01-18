@@ -1,11 +1,23 @@
 <template>
   <div>
-    <button>登陆</button>
+    <button @click="changeDisplay">登录</button>
   </div>
 </template>
 
-<style scoped>
-button {
-  outline: none;
+<script>
+export default {
+  data () {
+    return {
+      isDisplay: {
+        loginIsDisplay: 'block',
+        registerIsDisplay: 'none'
+      }
+    }
+  },
+  methods: {
+    changeDisplay () {
+      this.$emit('transferDisplay', this.isDisplay)
+    }
+  }
 }
-</style>
+</script>

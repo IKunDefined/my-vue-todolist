@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App'
+import axios from 'axios'
 import './assets/reset.css'
 
 let app = new Vue({
@@ -8,3 +9,4 @@ let app = new Vue({
 })
 
 Vue.use(app)
+Vue.prototype.$http = axios

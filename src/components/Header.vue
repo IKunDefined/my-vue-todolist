@@ -5,21 +5,21 @@
         <h1>My Todo List</h1>
       </div>
       <div class="right">
-        <UserLogin class="left login-button button" @transferDisplay="display"/>
-        <UserRegister class="right register-button button" @transferDisplay="display"/>
+        <LoginButton class="left login-button button" @transferDisplay="display"/>
+        <RegisterButton class="right register-button button" @transferDisplay="display"/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import UserLogin from './UserLogin'
-import UserRegister from './UserRegister'
+import LoginButton from './LoginButton'
+import RegisterButton from './RegisterButton'
 
 export default {
   components: {
-    UserLogin,
-    UserRegister
+    LoginButton,
+    RegisterButton
   },
   data () {
     return {

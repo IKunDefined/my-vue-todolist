@@ -4,7 +4,7 @@
     <TodoList/>
     <Login :style="{display: loginIsDisplay}"/>
     <Register :style="{display: registerIsDisplay}"/>
-    <Shade :style="{display: shadeIsDisplay}"/>
+    <Shade :style="{display: shadeIsDisplay}" @transferDispaly="display"/>
   </div>
 </template>
 
@@ -25,15 +25,16 @@ export default {
   },
   data () {
     return {
-      loginIsDisplay: 'block',
-      registerIsDisplay: 'block',
-      shadeIsDisplay: 'block'
+      loginIsDisplay: 'none',
+      registerIsDisplay: 'none',
+      shadeIsDisplay: 'none'
     }
   },
   methods: {
     display (isDisplay) {
       this.loginIsDisplay = isDisplay.loginIsDisplay
       this.registerIsDisplay = isDisplay.registerIsDisplay
+      this.shadeIsDisplay = isDisplay.shadeIsDisplay
     }
   }
 }

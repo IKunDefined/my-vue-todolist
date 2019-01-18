@@ -1,6 +1,25 @@
 <template>
-  <div id="shade"></div>
+  <div id="shade" @click="display"></div>
 </template>
+
+<script>
+export default {
+  data () {
+    return {
+      isDisplay: {
+        loginIsDisplay: 'none',
+        registerIsDisplay: 'none',
+        shadeIsDisplay: 'none'
+      }
+    }
+  },
+  methods: {
+    display () {
+      this.$emit('transferDispaly', this.isDisplay)
+    }
+  }
+}
+</script>
 
 <style scoped>
 #shade {

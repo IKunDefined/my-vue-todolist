@@ -9,8 +9,9 @@ export default {
   data () {
     return {
       isDisplay: {
-        registerIsDisplay: 'block',
-        loginIsDisplay: 'none'
+        registerIsDisplay: 'flex',
+        loginIsDisplay: 'none',
+        shadeIsDisplay: 'block'
       }
     }
   },

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="wrap">
     <InputArea @transferItem="getItem"/>
     <TodoItem :itemlist="todoItemList" @transferId="getId"/>
   </div>
@@ -31,5 +31,8 @@ export default {
 </script>
 
 <style scoped>
-
+#wrap {
+  width: 1000px;
+  margin: 0 auto;
+}
 </style>
